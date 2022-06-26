@@ -1,0 +1,24 @@
+block:
+  bad-words: true
+  domains: true
+  spam: true
+  caps-lock: true
+
+allow-same-messages: false
+allow-spam-commands: false # spamming commands
+wait-time: 20 # wait time between messages in ticks (1 tick = 0,05 seconds | 20 ticks = 1 second)
+# percentage is allowed
+# Example with percentage: caps-limit: 50% (if 50% of the message is in caps the player will be warned)
+# Example without percentage: caps-limit: 50 (if 50 symbols of the message are in caps the player will be warned)
+caps-limit: 50%
+
+#blocked-domains:
+# - ".de"
+# - "discord.gg"
+blocked-domains: []
+#allowed-domains:
+# - "discord.gg/invite/code" for your discord server or something else
+allowed-domains: []
+bad-words:
+  - "loser"
+

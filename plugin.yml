@@ -1,0 +1,5 @@
+name: ChatFilter
+version: 1.0
+api: 4.0.0
+main: r3pt1s\ChatFilter\ChatFilter
+author: r3pt1s

@@ -1,0 +1,8 @@
+prefix: "§8» §c§lChatFilter §r§8| §7"
+message_no_perms: "{PREFIX}You don't have the permission to use this command!"
+message_reloaded: "{PREFIX}Successful reloaded."
+message_bad_word: "{PREFIX}Please don't use a bad word!"
+message_domain: "{PREFIX}Please don't send domains in the chat!"
+message_spam: "{PREFIX}Please wait before sending a message!"
+message_caps_lock: "{PREFIX}Please deactivate your caps lock!"
+message_same_message: "{PREFIX}Please don't send the same messages in a row!"
