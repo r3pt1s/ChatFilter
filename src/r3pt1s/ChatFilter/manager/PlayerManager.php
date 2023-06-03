@@ -2,6 +2,7 @@
 
 namespace r3pt1s\ChatFilter\manager;
 
+use JetBrains\PhpStorm\Pure;
 use pocketmine\player\Player;
 use pocketmine\Server;
 use r3pt1s\ChatFilter\configuration\Configuration;
@@ -26,17 +27,17 @@ class PlayerManager {
         ];
     }
 
-    public static function getLastMessage(Player|string $player): ?string {
+    #[Pure] public static function getLastMessage(Player|string $player): ?string {
         $player = $player instanceof Player ? $player->getName() : $player;
         return (isset(self::$players[$player]) ? self::$players[$player]["last_message"] ?? null : null);
     }
 
-    public static function getNextMessage(Player|string $player): int {
+    #[Pure] public static function getNextMessage(Player|string $player): int {
         $player = $player instanceof Player ? $player->getName() : $player;
         return (isset(self::$players[$player]) ? self::$players[$player]["next_message"] ?? 0 : 0);
     }
 
-    public static function hasLastMessage(Player|string $player): bool {
+    #[Pure] public static function hasLastMessage(Player|string $player): bool {
         return self::getLastMessage($player) !== null;
     }
 

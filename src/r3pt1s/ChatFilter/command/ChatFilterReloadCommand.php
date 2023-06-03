@@ -2,6 +2,7 @@
 
 namespace r3pt1s\ChatFilter\command;
 
+use JetBrains\PhpStorm\Pure;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\lang\Translatable;
@@ -18,7 +19,7 @@ class ChatFilterReloadCommand extends Command implements PluginOwned {
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args): bool {
-        if ($sender->hasPermission($this->getPermission())) {
+        if ($this->testPermissionSilent($sender)) {
             Configuration::getInstance()->reload();
             $sender->sendMessage(MessageKeys::RELOADED());
         } else {
@@ -27,7 +28,7 @@ class ChatFilterReloadCommand extends Command implements PluginOwned {
         return true;
     }
 
-    public function getOwningPlugin(): ChatFilter {
+    #[Pure] public function getOwningPlugin(): ChatFilter {
         return ChatFilter::getInstance();
     }
 }
