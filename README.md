@@ -1,4 +1,4 @@
-# ChatFilter
+# [ChatFilter](https://poggit.pmmp.io/p/Chat-Filter) [![](https://poggit.pmmp.io/shield.state/Chat-Filter)](https://poggit.pmmp.io/p/Chat-Filter)
 
 ## Features
 - **Spam** Block
